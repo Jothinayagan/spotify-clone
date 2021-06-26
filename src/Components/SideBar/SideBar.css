@@ -1,0 +1,14 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 16vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.sidebar-img {
+    width: 130px;
+    height: 38px;
+    padding: 25px;
+}

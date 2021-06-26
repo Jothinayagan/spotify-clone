@@ -6,14 +6,24 @@ import Player from "./Components/Player";
 
 function App() {
     return (
-        <div className="App">
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "row",
+            }}>
             <div>
                 <SideBar />
             </div>
-            <div>
-              <NavBar />
-              <Main />
-              <Player />
+            <div
+                style={{
+                    width: "84vw",
+                    height: "100vh",
+                    backgroundColor: "#212121",
+                    color: "white",
+                }}>
+                <NavBar />
+                <Main />
+                <Player />
             </div>
         </div>
     );
