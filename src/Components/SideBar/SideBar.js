@@ -14,15 +14,25 @@ function SideBar() {
             </div>
             <div>
                 <ul>
-                    <li>Home</li>
-                    <li>Search</li>
-                    <li>Your Library</li>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Search</a>
+                    </li>
+                    <li>
+                        <a href="#">Your Library</a>
+                    </li>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li>Create Playlist</li>
-                    <li>Like Songs</li>
+                    <li>
+                        <a href="#">Create Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Like Songs</a>
+                    </li>
                 </ul>
             </div>
             <div>
