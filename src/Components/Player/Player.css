@@ -15,9 +15,61 @@
 }
 
 .padding-left {
-    padding-left: 25px;
+    padding-left: 16px;
 }
 
 .padding-right {
-    padding-right: 25px;
+    padding-right: 16px;
+}
+
+/* Player options */
+.player-options {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 32px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.player-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 534px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    height: 56px;
+    color: white;
+}
+
+.song-info-album-art {
+    height: 56px;
+    width: 56px;
+}
+
+.song-info-column-flex {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    width: 200px;
+}
+
+.padding-top {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.padding-bottom {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 11px;
 }
