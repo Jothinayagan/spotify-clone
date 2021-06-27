@@ -14,15 +14,15 @@ function NavBar() {
                 <button className="icon-button"></button>
             </div>
             <div className="nav-align-icon-left">
-                <button className="nav-button">UPGRADE</button>
+                <button className="nav-button nav-button-style">UPGRADE</button>
                 <div className="nav-space-between-icon"></div>
                 <div className="nav-dropdown">
-                    <button className="nav-button" onClick={handleUserButton}>
+                    <button className="nav-user-button nav-button-style" onClick={handleUserButton}>
                         Jothinayagan
                     </button>
                     {userButton && (
                         <div className="nav-dropdown-content">
-                            <ul>
+                            <ul className="nav-ul">
                                 <li>
                                     <a href="#">Account</a>
                                 </li>
