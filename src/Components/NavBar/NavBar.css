@@ -26,6 +26,8 @@
     border-radius: 50%;
     background-color: #121312;
     border: none;
+    cursor: pointer;
+    color: white;
 }
 
 .nav-button {
