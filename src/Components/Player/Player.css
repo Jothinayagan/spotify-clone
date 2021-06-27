@@ -1,0 +1,23 @@
+.player-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    margin: 0;
+    bottom: 0px;
+    background-color: #191918;
+    border-top: 1px solid #292829;
+    color: white;
+    /* Placing items */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.padding-left {
+    padding-left: 25px;
+}
+
+.padding-right {
+    padding-right: 25px;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import SideBar from "./Components/SideBar/SideBar";
 import NavBar from "./Components/NavBar/NavBar";
-import Main from "./Components/Main";
-import Player from "./Components/Player";
+import Main from "./Components/Main/Main";
+import Player from "./Components/Player/Player";
 
 function App() {
     return (
@@ -23,8 +23,8 @@ function App() {
                 }}>
                 <NavBar />
                 <Main />
-                <Player />
             </div>
+            <Player />
         </div>
     );
 }
