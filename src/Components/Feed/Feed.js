@@ -62,6 +62,62 @@ function Feed() {
                         ))}
                 </div>
             </div>
+
+            <div className="padding-left">
+                <h2>Made for you</h2>
+                <div className="display">
+                    <p className="info">
+                        Get better recommendations the more you listen.
+                    </p>
+                    <button className="button">SEE ALL</button>
+                </div>
+                <div className="box-card">
+                    {albumList &&
+                        albumList.map((item) => (
+                            <div className="card">
+                                <div className="display-image">
+                                    <img
+                                        className="img-padding"
+                                        src={item.albumArtUri}
+                                        alt="Album Art"
+                                        width="180"
+                                        height="180"
+                                    />
+                                </div>
+                                <p className="song-name">{item.name}</p>
+                                <p className="artist-name">{item.artist}</p>
+                            </div>
+                        ))}
+                </div>
+            </div>
+
+            <div className="padding-left">
+                <h2>Made for you</h2>
+                <div className="display">
+                    <p className="info">
+                        Get better recommendations the more you listen.
+                    </p>
+                    <button className="button">SEE ALL</button>
+                </div>
+                <div className="box-card">
+                    {albumList &&
+                        albumList.map((item) => (
+                            <div className="card">
+                                <div className="display-image">
+                                    <img
+                                        className="img-padding"
+                                        src={item.albumArtUri}
+                                        alt="Album Art"
+                                        width="180"
+                                        height="180"
+                                    />
+                                </div>
+                                <p className="song-name">{item.name}</p>
+                                <p className="artist-name">{item.artist}</p>
+                            </div>
+                        ))}
+                </div>
+            </div>
         </div>
     );
 }
