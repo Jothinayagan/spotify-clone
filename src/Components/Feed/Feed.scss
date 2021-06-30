@@ -1,0 +1,95 @@
+@mixin display-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin display-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin row-container {
+    @include display-row();
+    width: 80vw;
+}
+
+.display-scroll {
+    @include display-column();
+    overflow: scroll;
+    height: 80vh;
+}
+
+.display-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.display {
+    @include row-container();
+    align-items: center;
+    justify-content: space-between;
+}
+
+.padding-left {
+    padding-left: 25px;
+}
+
+.info {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.button {
+    color: whitesmoke;
+    background-color: transparent;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    color: #b3b3b3;
+    letter-spacing: 1px;
+}
+
+.box-card {
+    @include row-container();
+    height: 295px;
+    justify-content: space-between;
+}
+
+.card {
+    @include display-column();
+    width: 217px;
+    height: 295px;
+    background-color: #181919;
+    border-radius: 5px;
+}
+
+.img-padding {
+    padding: 15px 15px 0px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin margin-top-bottom-0px {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.song-name {
+    @include margin-top-bottom-0px();
+    padding: 15px 0px 0px 18px;
+    font-weight: 700;
+}
+
+.author-name {
+    @include margin-top-bottom-0px();
+    padding: 10px 0px 0px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #b3b3b3;
+}
+
+.display-image {
+    @include display-row();
+    justify-content: center;
+}
