@@ -15,3 +15,14 @@ export const SPOTIFY_SCOPE = [
 export const LOGIN_URI = `${SPOTIFY_AUTH_URI}?client_id=${SPOTIFY_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SPOTIFY_SCOPE.join(
   "%20"
 )}&response_type=token&show_dialog=true`;
+
+export const getTokenFromUrl = () => {
+  return window.location.hash
+    .substring(1)
+    .split("&")
+    .reduce((initial, item) => {
+      let parts = item.split("=");
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+      return initial;
+    }, {});
+};
