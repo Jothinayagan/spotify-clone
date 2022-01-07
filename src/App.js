@@ -3,15 +3,17 @@ import SideBar from "./Components/SideBar/SideBar";
 import NavBar from "./Components/NavBar/NavBar";
 import Feed from "./Components/Feed/Feed";
 import Player from "./Components/Player/Player";
+import Login from "./Components/Login/Login";
 
 function App() {
-    return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "row",
-            }}>
-            <div>
+  return (
+    <div
+    //   style={{
+    //     display: "flex",
+    //     flexDirection: "row",
+    //   }}
+    >
+      {/* <div>
                 <SideBar />
             </div>
             <div
@@ -24,9 +26,10 @@ function App() {
                 <NavBar />
                 <Feed />
             </div>
-            <Player />
-        </div>
-    );
+            <Player /> */}
+      <Login />
+    </div>
+  );
 }
 
 export default App;
