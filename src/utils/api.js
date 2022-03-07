@@ -1,8 +1,7 @@
-export const SPOTIFY_LOGO_URL =
-  "https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg";
-export const SPOTIFY_AUTH_URI = "https://accounts.spotify.com/authorize";
-export const SPOTIFY_CLIENT_ID = "011f9c47ceb342929fefd4cae8cc7179";
-export const REDIRECT_URI = "http://localhost:3000/";
+export const SPOTIFY_LOGO_URL = process.env.REACT_APP_SPOTIFY_LOGO_URL;
+export const SPOTIFY_AUTH_URI = process.env.REACT_APP_SPOTIFY_AUTH_URI;
+export const SPOTIFY_CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+export const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI;
 
 export const SPOTIFY_SCOPE = [
   "user-read-currently-playing",
@@ -15,14 +14,3 @@ export const SPOTIFY_SCOPE = [
 export const LOGIN_URI = `${SPOTIFY_AUTH_URI}?client_id=${SPOTIFY_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SPOTIFY_SCOPE.join(
   "%20"
 )}&response_type=token&show_dialog=true`;
-
-export const getTokenFromUrl = () => {
-  return window.location.hash
-    .substring(1)
-    .split("&")
-    .reduce((initial, item) => {
-      let parts = item.split("=");
-      initial[parts[0]] = decodeURIComponent(parts[1]);
-      return initial;
-    }, {});
-};

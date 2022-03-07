@@ -5,7 +5,7 @@ import "./Login.css";
 function Login() {
   return (
     <div className="login">
-      <img src={SPOTIFY_LOGO_URL} />
+      <img alt="spotify logo" src={SPOTIFY_LOGO_URL} />
       <a href={LOGIN_URI}>LOGIN WITH SPOTIFY</a>
     </div>
   );
