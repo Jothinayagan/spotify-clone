@@ -3,6 +3,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import { isEmpty } from "lodash";
 import Login from "./Components/Login/Login";
 import { getTokenFromUrl } from "./utils/config";
+import { useDataLayer } from "./Context";
 
 // import SideBar from "./Components/SideBar/SideBar";
 // import NavBar from "./Components/NavBar/NavBar";
@@ -12,18 +13,27 @@ import { getTokenFromUrl } from "./utils/config";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null);
+  const [{ user, token }, dispatch] = useDataLayer();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
     const _token = hash.access_token;
-    // console.log(typeof _token);
 
     if (!isEmpty(_token)) {
-      setToken(_token);
+      dispatch({
+        type: "SET_TOKEN",
+        token: _token,
+      });
+
       spotify.setAccessToken(_token);
-      spotify.getMe().then((user) => console.log("User", user));
+
+      spotify.getMe().then((user) =>
+        dispatch({
+          type: "SET_USER",
+          user,
+        })
+      );
     }
   }, []);
 
