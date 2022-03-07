@@ -18,9 +18,10 @@ function Sidebar() {
             <br />
             <strong className="sidebar_title">PLAYLISTS</strong>
             <hr />
-            <SidebarOptions title={"Rock and roll"} />
-            <SidebarOptions title={"GTA V"} />
-            <SidebarOptions title={"Euro Truck Simulator"} />
+
+            {playlists?.items?.map((playlist) => (
+                <SidebarOptions key={playlist.id} title={playlist.name} />
+            ))}
         </div>
     );
 }

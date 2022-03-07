@@ -3,13 +3,14 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    token: "BQBiVFTZu8y2BJclx6w5HPMn4HXe_wUEfrZabUndzaEXcN7XdAzA0HEHOXdB2Q_I_6ZWDpUwxBIS1ihk_sxb2yxSkaCgQLax6S4wFwDLrpTUtThCqfagxCppoqUQtWoA0_g2JL-r7swOZIl4frm7QGLsQPXjbi8YX2rhRTXDsm3w3_nzQmJU",
+    token: null,
 };
 
 export const reducer = (state, action) => {
-    console.log("Action", action);
+    // console.log("Action", action);
+    // console.log("State", state);
 
-    switch (action) {
+    switch (action.type) {
         case "SET_USER":
             return {
                 ...state,
