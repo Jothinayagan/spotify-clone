@@ -1,7 +1,10 @@
 @font-face {
     font-family: "LatoRegular";
-    src: local("LatoRegular"),
-        url("./Assets/Fonts/Lato-Regular.ttf") format("truetype");
+    src: local("LatoRegular"), url("./Assets/Fonts/Lato-Regular.ttf") format("truetype");
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -12,8 +15,7 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 li {
