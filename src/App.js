@@ -37,6 +37,13 @@ function App() {
                     playlists,
                 })
             );
+
+            spotify.getPlaylist(process.env.REACT_APP_DISCOVER_WEEKLY_PLAYLIST).then((playlist) => {
+                dispatch({
+                    type: "SET_DISCOVER_WEEKLY",
+                    discover_weekly: playlist,
+                });
+            });
         }
     });
 

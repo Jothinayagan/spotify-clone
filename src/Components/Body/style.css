@@ -3,5 +3,134 @@
     height: 100vh;
     color: white;
     flex: 0.8;
+    overflow-y: overlay;
     background: linear-gradient(rgb(91, 87, 115), rgb(0, 0, 0, 1));
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+.body_info {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.body_info > img {
+    height: 10vw;
+    margin: 0 20px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.body_infoText {
+    flex: 1;
+}
+
+.body_infoText > h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.body_infoText > p {
+    font-size: 14px;
+}
+
+.body_shuffle {
+    font-size: 70px !important;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.body_icons {
+    display: flex;
+    align-items: center;
+}
+
+.body_icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+.body_icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+
+.body_shuffle:hover {
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+}
+
+.body_songs {
+    z-index: 1;
+    margin: 20px -30px;
+}
+
+/* Header CSS */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_left {
+    flex: 0.5;
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    color: gray;
+    align-items: center;
+}
+
+.header_left > input {
+    border: none;
+    width: 100%;
+}
+
+.header_right > h4 {
+    margin-left: 10px;
+}
+
+/* SongItem CSS */
+
+.songitem {
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+.songitem:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.songitem_info {
+    margin-left: 20px;
+}
+
+.songitem_info > h1 {
+    font-size: 16px;
+}
+
+.songitem_info > p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+}
+
+.songitem_album {
+    height: 40px;
+    width: 40px;
 }
