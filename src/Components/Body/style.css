@@ -68,6 +68,10 @@
 
 /* Header CSS */
 
+input:focus {
+    outline: none;
+}
+
 .header {
     display: flex;
     justify-content: space-between;

@@ -6,7 +6,7 @@ import { getTokenFromUrl } from "./utils/config";
 import { useSpotify } from "./Context";
 import Player from "./Components/Player";
 
-const spotify = new SpotifyWebApi();
+export const spotify = new SpotifyWebApi();
 
 function App() {
     const [{ token }, dispatch] = useSpotify();
