@@ -11,7 +11,7 @@ function Sidebar() {
     const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
-        if (spotifyReducer.playlists.length > 0) setPlaylists(spotifyReducer.playlists);
+        if (spotifyReducer.playlists) setPlaylists(spotifyReducer.playlists);
     }, [spotifyReducer.playlists]);
 
     return (
