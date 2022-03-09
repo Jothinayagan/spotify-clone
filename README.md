@@ -1,6 +1,22 @@
-# Spotify clone using React & Spotify Web API
+# Spotify clone using React & Spotify Web API 🚀
 
 **❗ The cloning is still under development. Hence clone may breaks.**
+
+[Live Demo](https://spotify-jothinayagan.netlify.app/) 🔗
+
+---
+
+### Stack 📚
+
+<ul>
+  <li>React</li>
+  <li>Spotify Web API</li>
+  <li>React Redux</li>
+  <li>Material UI</li>
+  <li>Lodash</li>
+</ul>
+
+---
 
 In the project directory, you can run:
 

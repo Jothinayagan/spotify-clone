@@ -1,25 +1,30 @@
-import React from "react";
-import { useSpotify } from "../../Context";
-import Header from "./Header";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import "./style.css";
+import Header from "./Header";
 import SongItem from "./SongItem";
+import "./style.css";
 
 function Body({ spotify }) {
-    const [{ discover_weekly }, dispatch] = useSpotify();
+    const spotifyReducer = useSelector((state) => state.spotify);
+    const [weekly, setWeekly] = useState(null);
+
+    useEffect(() => {
+        if (spotifyReducer.discover_weekly) setWeekly(spotifyReducer.discover_weekly);
+    }, [spotifyReducer.discover_weekly]);
 
     return (
         <div className="body">
             <Header spotify={spotify} />
 
             <div className="body_info">
-                <img src={discover_weekly?.images[0].url} alt="" />
+                <img src={weekly?.images[0].url} alt="" />
                 <div className="body_infoText">
                     <strong>PLAYLIST</strong>
                     <h2>Discover Weekly</h2>
-                    <p>{discover_weekly?.description}</p>
+                    <p>{weekly?.description}</p>
                 </div>
             </div>
 
@@ -30,7 +35,7 @@ function Body({ spotify }) {
                     <MoreHorizIcon />
                 </div>
 
-                {discover_weekly?.tracks.items.map((item) => (
+                {weekly?.tracks.items.map((item) => (
                     <SongItem track={item.track} key={item.track.id} />
                 ))}
             </div>

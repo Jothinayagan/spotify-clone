@@ -1,13 +1,18 @@
-import React from "react";
-import SidebarOptions from "./SidebarOption";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
-import { useSpotify } from "../../Context";
+import SidebarOptions from "./SidebarOption";
 import "./style.css";
 
 function Sidebar() {
-    const [{ playlists }, dispatch] = useSpotify();
+    const spotifyReducer = useSelector((state) => state.spotify);
+    const [playlists, setPlaylists] = useState([]);
+
+    useEffect(() => {
+        if (spotifyReducer.playlists.length > 0) setPlaylists(spotifyReducer.playlists);
+    }, [spotifyReducer.playlists]);
 
     return (
         <div className="sidebar">
