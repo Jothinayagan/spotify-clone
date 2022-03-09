@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Avatar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import "./style.css";
-import { useSpotify } from "../../Context";
 
 function Header({ spotify }) {
-    const [{ user }, dispatch] = useSpotify();
+    const spotifyReducer = useSelector((state) => state.spotify);
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        if (spotifyReducer.user) setUser(spotifyReducer.user);
+    }, [spotifyReducer.user]);
 
     return (
         <div className="header">
