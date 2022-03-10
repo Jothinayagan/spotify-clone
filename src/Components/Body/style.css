@@ -104,13 +104,29 @@ input:focus {
 
 /* SongItem CSS */
 
-.songitem {
+.songitem_header {
     margin-left: 20px;
     padding-left: 5px;
     padding-right: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    /* z-index: 100; */
+    color: white;
+}
+
+.demo {
+    border-width: 5px;
+    border-color: white;
+}
+
+.songitem {
+    /* margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px; */
     display: flex;
     align-items: center;
-    z-index: 100;
+    /* z-index: 100; */
     color: white;
 }
 
