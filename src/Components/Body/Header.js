@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Avatar } from "@mui/material";
+import { Avatar, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import "./style.css";
+import useLogout from "../../hooks/useLogout";
 
 function Header({ spotify }) {
     const spotifyReducer = useSelector((state) => state.spotify);
     const [user, setUser] = useState(null);
+    const logout = useLogout();
 
     useEffect(() => {
         if (spotifyReducer.user) setUser(spotifyReducer.user);
@@ -21,6 +23,10 @@ function Header({ spotify }) {
             <div className="header_right">
                 <Avatar alt={user?.display_name} src={user?.images[0].url} />
                 <h4>{user?.display_name}</h4>
+
+                <Button variant="outlined" onClick={() => logout()}>
+                    Logout
+                </Button>
             </div>
         </div>
     );
